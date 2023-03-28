@@ -1,0 +1,75 @@
+{
+  "seller": [
+    {
+      "name": "Danial Rehman",
+      "email": "danial@seller.com",
+      "password": "abc@123",
+      "id": 1
+    },
+    {
+      "name": "Atta Rehman",
+      "email": "atta@seller.com",
+      "password": "abc@123",
+      "id": 2
+    },
+    {
+      "name": "Tony Stark",
+      "email": "tony@seller.com",
+      "password": "anc@123",
+      "id": 3
+    },
+    {
+      "name": "Steve Rogers",
+      "email": "steve@seller.com",
+      "password": "abc@123",
+      "id": 4
+    },
+    {
+      "name": "Natasha",
+      "email": "natasha@seller.com",
+      "password": "abc@123",
+      "id": 5
+    },
+    {
+      "name": "Clint Bartin",
+      "email": "clint@seller.com",
+      "password": "abc@123",
+      "id": 6
+    },
+    {
+      "name": "Thor",
+      "email": "thor@seller.com",
+      "password": "abc@123",
+      "id": 7
+    },
+    {
+      "name": "Loki",
+      "email": "loki@seller.com",
+      "password": "abc@123",
+      "id": 8
+    },
+    {
+      "name": "Hulk",
+      "email": "hulk@seller.com",
+      "password": "abc@123",
+      "id": 9
+    },
+    {
+      "name": "Dr. Stephen Strange",
+      "email": "stephen@seller.com",
+      "password": "abc@123",
+      "id": 10
+    }
+  ],
+  "products": [
+    {
+      "name": "asdads",
+      "price": "dasdsadsa",
+      "color": "dasdada",
+      "category": "dadadas",
+      "description": "dadas",
+      "image": "https://images.samsung.com/pk/smartphones/galaxy-s22-ultra/buy/S22_Ultra_Carousel_GroupKV_MO.jpg",
+      "id": 6
+    }
+  ]
+}

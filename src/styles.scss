@@ -1,1 +1,121 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$Emart-primary: mat.define-palette(mat.$indigo-palette);
+$Emart-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$Emart-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$Emart-theme: mat.define-light-theme((
+  color: (
+    primary: $Emart-primary,
+    accent: $Emart-accent,
+    warn: $Emart-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($Emart-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+.formHeading h1 {
+  color: #fc624d;
+  margin-top: 80px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.productFormHeading h1 {
+  color: #fc624d;
+  margin-top: 55px;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.commonForm {
+  margin: auto;
+  width: 300px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.formInput {
+  height: 35px;
+  padding: 10px;
+  margin-top: 7px;
+  border-radius: 5px;
+  margin-bottom: 14px;
+  border: 1px solid #fc624d;
+}
+
+.form-control {
+  height: 10px;
+  margin-top: 7px;
+  margin-bottom: 14px;
+  border: 1px solid #fc624d !important;
+}
+
+.formButton {
+  height: 35px;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  background-color: #fc624d;
+  border: 1px solid #fc624d;
+}
+
+.authToggleLink {
+  font-size: 1rem;
+  margin-top: 20px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.authError {
+  opacity: 5;
+  width: 300px;
+  margin: auto;
+  padding: 5px;
+  color: red;
+  font-weight: 600;
+  border-radius: 5px;
+  text-align: center;
+  // background-color: rgba(255,192,203.0);
+  // border: 1px solid 1px solid rgb(255 167 182);
+}
+
+.productMessage {
+  opacity: 5;
+  width: 300px;
+  margin: auto;
+  padding: 5px;
+  color: green;
+  font-weight: 600;
+  border-radius: 5px;
+  text-align: center;
+}

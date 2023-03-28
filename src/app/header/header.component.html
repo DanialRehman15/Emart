@@ -1,0 +1,26 @@
+<nav class="navbar">
+    <h1><a routerLink="/"><b style="color:#fc624d;">E</b>mart</a></h1>
+    <div *ngIf="menuType==='default'" class="navSearch">
+        <input type="text" placeholder="Search Products">
+        <button>Search</button>
+    </div>
+    <div [ngSwitch]="menuType">
+        <!-- User Menus Start -->
+        <ul *ngSwitchCase="'default'">
+            <li><a routerLink="/seller-auth">Seller</a></li>
+            <li><a routerLink="/">Home</a></li>
+            <li><a href="">Login</a></li>
+            <li><a href="">Cart</a></li>
+        </ul>
+        <!-- User Menus End -->
+
+        <!-- Seller Menus Start -->
+        <ul *ngSwitchCase="'seller'">
+            <li><a routerLink="/seller-home">My Products</a></li>
+            <li><a routerLink="/seller-add-product">Add Product</a></li>
+            <li><a (click)="logout()">Logout</a></li>
+            <li><a style="color: #fc624d;">{{sellerName | titlecase}}</a></li>
+        </ul>
+        <!-- Seller Menus End -->
+    </div>
+</nav>
